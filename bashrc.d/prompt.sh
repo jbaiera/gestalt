@@ -4,7 +4,7 @@ set_prompt() {
 	local e="\[\e["
 	local end="m\]"
 
-	local x="${e}0${end}"
+	local NO_COLOR="${e}0${end}"
 	local BLUE="${e}0;34${end}"
 	local DARK_BLUE="${e}1;34${end}"
 	local RED="${e}0;31${end}"
