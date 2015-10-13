@@ -4,8 +4,10 @@
 # Check the terminal options to see if it contains 'i'
 [[ $- != *i* ]] && return
 
-if [ -d $HOME/.bashrc.d ] then
-	for f in $HOME/.bashrc.d/*.sh do
+if [ -d $HOME/.bashrc.d ] 
+then
+	for f in $HOME/.bashrc.d/*.sh 
+	do
 		. $f
 	done
 
