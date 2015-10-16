@@ -13,14 +13,14 @@ set_prompt() {
 
 	case $TERM in
 		xterm*|screen)
-			TITLEBAR="\[\e]0;\u@\h \w\007\]";
+			local TITLEBAR="\[\e]0;\u@\h \w\007\]";
 			;;
 		*)
-			TITLEBAR="";
+			local TITLEBAR="";
 			;;
 	esac
 
-	FAILURE_COLOR="if [[ \$? = '0' ]]; then echo \"$GREEN\"; else echo \"$RED\"; fi"
+	local FAILURE_COLOR="if [[ \$? = '0' ]]; then echo \"$GREEN\"; else echo \"$RED\"; fi"
 
 	PS1="$TITLEBAR$BLUE[\t]\`$FAILURE_COLOR\` \u@\h> $NO_COLOR"
 }
